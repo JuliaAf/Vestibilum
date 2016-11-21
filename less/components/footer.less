@@ -1,0 +1,149 @@
+.footer {
+  padding-top: 3.846em;
+
+  color: #ffffff;
+
+  background: @mainColor;
+  background-image: url(../img/linear-light.svg);
+  background-repeat: repeat-x;
+  background-size: 2%;
+  & .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  &__contacts {
+    flex-basis: 30%;
+  }
+  &__contacts b {
+    font-weight: 900;
+    font-size: 20px;
+  }
+  &__contacts p {
+    margin-bottom: 2.308em;
+  }
+  &__contacts span {
+    margin-right: 1.538em;
+  }
+  &__contacts-logo {
+    margin-bottom: 1.2em;
+
+    font-size: 25px;
+  }
+  &__contacts-logo b {
+    font-size: 30px;
+  }
+  &__contacts a {
+    cursor: pointer;
+  }
+  &__contacts a:hover {
+    color: inherit;
+  }
+  &__nav {
+    display: flex;
+    flex-basis: 30%;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  &__nav ul {
+    padding-left: 20px;
+  }
+
+  &__nav li::before {
+    content: "\f105";
+
+    margin-right: 10px;
+
+    font-family: "fontAwesome";
+  }
+  &__nav a:hover {
+    color: inherit;
+  }
+  &__nav b {
+    display: inline-block;
+    margin-bottom: 1.6em;
+
+    font-weight: 900;
+    font-size: 20px;
+    color: darken(@mainColor, 30%);
+  }
+  &__nav-company,
+  &__nav-community, {
+    flex-basis: 50%;
+  }
+  &__latest-news {
+    flex-basis: 30%;
+  }
+  &__latest-news > span {
+    display: inline-block;
+    margin-bottom: 1.65em;
+
+    font-size: 20px;
+  }
+  &__latest-news > span i {
+    margin-right: 7px;
+
+    font-weight: 200;
+  }
+  &__latest-news-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    margin-bottom: 1.538em;
+  }
+  &__latest-news-item i {
+    margin-right: 10px;
+    padding: 20px;
+
+    font-size: 40px;
+    color: rgba(255,255,255,0.5);
+
+    background: darken(@mainColor, 20%);
+
+    .br();
+  }
+  &__latest-news-item span {
+    color: darken(@mainColor, 20%);
+  }
+}
+@media(max-width:900px) {
+  .footer {
+    &__contacts {
+      flex-basis: 100%;
+      margin-bottom: 4em;
+    }
+    &__nav {
+      flex-basis: 45%;
+    }
+    &__latest-news {
+      flex-basis: 45%;
+    }
+  }
+}
+@media(max-width:700px) {
+  .footer {
+    & .wrapper {
+      flex-direction: column;
+    }
+    &__contacts {
+      // flex-basis: 60%;
+      margin-bottom: 4em;
+    }
+    &__nav {
+      width: 70%;
+      // flex-basis: 60%;
+      margin-bottom: 4em;
+    }
+    &__latest-news {
+      width: 100%;
+      // flex-basis: 100%;
+    }
+  }
+}
+@media(max-width:700px) {
+  .footer {
+    &__nav {
+      width: 100%;
+    }
+  }
+}

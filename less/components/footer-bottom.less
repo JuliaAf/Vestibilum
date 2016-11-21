@@ -1,0 +1,35 @@
+.footer-bottom {
+  padding: 1.154em 0;
+  padding-bottom: 0.538em;
+
+  color: #ffffff;
+
+  background: darken(@mainColor, 10%);
+  & .wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  &__copyright {
+    flex-basis: 50%;
+  }
+  &__socials {
+    flex-basis: 50%;
+
+    text-align: right;
+  }
+  &__socials a {
+    display: inline-block;
+    margin-left: 0.6em;
+
+    font-size: 1.92em;
+  }
+  &__socials a:hover svg {
+    opacity: 0.5;
+  }
+  &__socials svg {
+    transition: 0.5s ease-in-out opacity;
+
+    fill: #ffffff;
+  }
+}
