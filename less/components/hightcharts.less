@@ -1,0 +1,33 @@
+.highcharts {
+  &-background {
+    fill: transparent;
+  }
+  &-color-0,
+  &-color-1 {
+    stroke: transparent;
+    stroke-width: 0;
+  }
+  &-color-0 {
+    fill: darken(@accentColor, 15%);
+  }
+  &-color-1 {
+    fill: @mainColor;
+  }
+  &-credits {
+    display: none;
+  }
+  &-button-box,
+  &-button-symbol {
+    display: none;
+  }
+  &-point {
+    stroke: 0;
+    stroke: none;
+    stroke-width: 0;
+  }
+}
+@media(max-width:500px) {
+  &-title tspan {
+    font-size: 12px;
+  }
+}

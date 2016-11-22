@@ -7,7 +7,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync");
 var rename = require("gulp-rename");
-var minify = require("gulp-csso");
+var clearCSS = require('gulp-clean-css');
 var rimraf = require("rimraf");
 var merge = require("merge-stream");
 
@@ -34,7 +34,7 @@ gulp.task("style", ["clean"], function() {
 
 gulp.task("compress", ["style"], function(){
   gulp.src("css/**/*.css")
-  .pipe(minify())
+  .pipe(clearCSS())
   .pipe(rename("style.min.css"))
   .pipe(gulp.dest("css"));
 });
